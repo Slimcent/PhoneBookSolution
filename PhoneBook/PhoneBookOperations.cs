@@ -4,7 +4,7 @@ namespace PhoneBook
 {
     public class PhoneBookOperations
     {
-        private List<Contact> contacts { get; set; }
+        private List<Contact> contacts { get; set; } = new List<Contact>();
 
         private void DisplayContactDetails(Contact contact)
         {
