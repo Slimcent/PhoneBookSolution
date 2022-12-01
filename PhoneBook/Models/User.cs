@@ -1,16 +1,16 @@
 ﻿namespace PhoneBook.Models
 {
-    public class Contact
+    public class User
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Number { get; set; }
+        public string Password { get; set; }
 
-        public Contact(int id, string name, string number)
+        public User(int id, string name, string password)
         {
             Id = id;
             Name = name;
-            Number = number;
+            Password = password;
         }
     }
 }

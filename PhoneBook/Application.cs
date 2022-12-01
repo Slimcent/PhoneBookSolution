@@ -1,4 +1,5 @@
 ﻿using PhoneBook.Models;
+using PhoneBook.Operations;
 using PhoneBook.Validations;
 using System.Text;
 
@@ -35,16 +36,7 @@ namespace PhoneBook
                 switch (selection)
                 {
                     case "1":
-                        Console.WriteLine("Enter name");
-                        string name = Console.ReadLine();
-
-                        Console.WriteLine("Enter phone number");
-                        string phoneNumber = Console.ReadLine();
-
-                        Contact contact = new Contact(name, phoneNumber);
-                        operations.AddContact(contact);
-
-                        Console.WriteLine("Contact created successfully");
+                        operations.AddContact();
 
                         break;
                     case "2":
@@ -55,7 +47,8 @@ namespace PhoneBook
 
                         break;
                     case "3":
-                        operations.DisplayAllContacts();
+                        GetContacts.GetAllContacts();
+                        //operations.DisplayAllContacts();
 
                         break;
                     case "4":
