@@ -47,7 +47,7 @@ namespace PhoneBook
 
         public void DisplayMatchingContacts(string searchTerm)
         {
-            IEnumerable<Contact> matchingContact = contacts.Where(c => c.Name.Contains(searchTerm));
+            IEnumerable<Contact> matchingContact = contacts.Where(c => c.Name.Contains(searchTerm)).ToList();
 
             DisplayContactsDetails((List<Contact>)matchingContact);
         }
